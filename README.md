@@ -2,7 +2,7 @@
 
 Comandos básicos e essenciais para uso em projetos open source
 
-# CONFIGURANDO USUÁRIO
+# CONFIGURANDO MAIS DE UM USUÁRIO
 
 git config --add user.name "Segundo Usuario"
 
@@ -38,7 +38,7 @@ git add README.md
 
 git commit -m "first commit"
 
-git remote add origin https://github.com/DevAdriana/site-modelo.git
+git remote add origin https://github.com/Everton1982/nome-do-repositorio.git
 
 git push -u origin master
 
@@ -46,7 +46,7 @@ git push -u origin master
 OU ENVIA REPOSITORIO EXISTENTE
 
 
-git remote add origin https://github.com/DevAdriana/site-modelo.git
+git remote add origin https://github.com/Everton1982/nome-do-repositorio.git
 
 git push -u origin master
 
@@ -74,13 +74,13 @@ git push --set-upstream origin patch-0 // push do arquivo para repositorio
 
 git log // log com informações das modificações enviadas para a master
 
-# ====================para exclusões de PRs fechadas===================
+## ===para exclusões de PRs fechadas===
 
 git checkout master // muda para a branch master
 
 git branch -D nomedabranch // deleta a modificação enviada para a master
 
-# =====================================================================
+## ====================================
 
 git fetch
 
