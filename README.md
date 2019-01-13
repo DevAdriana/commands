@@ -1,55 +1,36 @@
-# COMANDOS GIT
+Comandos Essenciais Git
 
-Comandos básicos e essenciais para uso em projetos open source
+## Configurar usuário
+$ git --global user.name "NOME DO USUÁRIO" 
+// configura usuário
+$ git --global user.email "EMAIL DO USUÁRIO"
+// configura email
 
-# CONFIGURANDO MAIS DE UM USUÁRIO
 
-- git config --add user.name "Segundo Usuario"
-
-- git config --add user.email email@segundaconta.com
-
-REMOVENDO CONFIGURAÇÃO GLOBAL USUÁRIO
-
-- git config --global --unset user.name
-
-- git config --global --unset user.email
-
-ou 
-
-- git config --global --unset-all
-
-ou 
-
-- echo -e "host=github.com\nprotocol=https\n" | git credential-osxkeychain erase
-
-- git config --unset-all --global user.name
-
-- git config --unset-all --global user.email
+## Criando repositorio e enviando arquivos.
+# crie um repositório no github.com
+$ git init         
+// inicia repositorio
+$ git remote add origin https://github.com/usuário/repositorio-criado.git  
+// sincroniza com o repositório remoto
+$ git status       
+// monitora as mudanças
+$ git add nome-do-repositorio
+// adiciona arquivo no git
+$ git commit -m "mensagem referente o envio"
+// envia uma mensagem referente ao arquivo modificado e enviado
+$ git push origin -u master
+// envia o arquivo para repositorio remoto
 
 
 
-# CRIANDO UM R3POSITÓRIO
-
-- echo "# site-modelo" >> README.md
-
-- git init
-
-- git add README.md
-
-- git commit -m "first commit"
-
-- git remote add origin https://github.com/Everton1982/nome-do-repositorio.git
-
-- git push -u origin master
-
-
-OU ENVIA REPOSITORIO EXISTENTE
-
-
-- git remote add origin https://github.com/Everton1982/nome-do-repositorio.git
-
-- git push -u origin master
-
+## Enviar arquivos atualizados
+$ git add nome-do-repositorio
+// adiciona arquivo no git
+$ git commit -m "mensagem referente o envio"
+// envia uma mensagem referente ao arquivo modificado e enviado
+$ git push 
+// envia o arquivo modificado
 
 
 # CONTRIBUINDO EM PROJETOS OPENSOURCE
@@ -73,21 +54,6 @@ OU ENVIA REPOSITORIO EXISTENTE
 - git push --set-upstream origin patch-0 // push do arquivo para repositorio
 
 - git log // log com informações das modificações enviadas para a master
-
-## ===para exclusões de PRs fechadas===
-
-- git checkout master // muda para a branch master
-
-- git branch -D nomedabranch // deleta a modificação enviada para a master
-
-## ====================================
-
-- git fetch
-
-- git rebase  upstream/master // busca todos os commits da master e atualiza
-
-- git push origin master // enviar as novas modificações para a master
-
 
 
 
